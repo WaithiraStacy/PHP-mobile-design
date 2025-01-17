@@ -1,0 +1,174 @@
+#HTML5: Mobile-Responsive Layout
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mobile Responsive Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Logo</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="item">
+                <h2>Content Section 1</h2>
+                <p>This is an example of content that adapts to different screen sizes.</p>
+            </div>
+            <div class="item">
+                <h2>Content Section 2</h2>
+                <p>This is another section that resizes and rearranges on mobile devices.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Company Name</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+#CSS3: Mobile-Responsive Styling
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container for centering content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem 0;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Main Content Section */
+main {
+    padding: 2rem 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.content .item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1rem;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .content .item {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .content .item {
+        padding: 1rem;
+    }
+}
